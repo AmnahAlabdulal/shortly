@@ -1,0 +1,153 @@
+ @import '../styles.scss';
+
+
+ .intro {
+   height: 600px;
+   color: $grayish-violet;
+ }
+
+ .img-bg {
+   width: 130%;
+   height: auto;
+   background-repeat: no-repeat;
+ }
+
+
+ .advanced {
+   position: relative;
+   background-color: $light-gray;
+   height: auto;
+   color: $grayish-violet;
+   padding-right: 90px;
+   padding-bottom: 100px;
+
+   .lead {
+     width: 50%;
+     margin: 0 auto;
+   }
+ }
+
+ .url-container {
+   width: 80%;
+   background-color: $dark-violet;
+   border-radius: 10px;
+   position: absolute;
+   top: -50px;
+   left: 0;
+   right: 0;
+   margin-left: auto;
+   margin-right: auto;
+   height: 130px;
+   background-image: url(../assets/images/bg-boost-desktop.svg);
+   display: flex;
+   gap: 15px;
+   padding: 0 20px;
+   justify-content: center;
+
+   .form-control {
+     width: 80%;
+   }
+
+   .btn-rect,
+   .form-control {
+     align-self: center;
+
+   }
+
+ }
+
+ .flex-container {
+   display: flex;
+   justify-content: center;
+   gap: 30px;
+   margin-top: 80px;
+ }
+
+ .icon {
+   background-color: $dark-violet;
+   width: 70px;
+   height: 70px;
+   padding: 18px;
+   clip-path: circle();
+   position: absolute;
+   top: -40px;
+ }
+
+ .flexbox {
+   background-color: white;
+   position: relative;
+   color: $grayish-violet;
+   padding: 80px 30px 30px 30px;
+   border-radius: 5px;
+   width: 30%;
+   height: 10%;
+
+   p {
+     font-size: 14px;
+   }
+
+ }
+
+ .first:after {
+   content: "";
+   background-color: $cyan;
+   height: 10px;
+   width: 30px;
+   position: absolute;
+   top: 100px;
+   right: -30px;
+ }
+
+
+
+ .second {
+   margin-top: 40px;
+   position: relative;
+ }
+
+ .second:after {
+   content: "";
+   background-color: $cyan;
+   height: 10px;
+   width: 30px;
+   position: absolute;
+   top: 70px;
+   right: -30px;
+ }
+
+ .third {
+   margin-top: 80px;
+ }
+
+
+ .boost {
+   background-color: $dark-violet;
+   height: 200px;
+   background-image: url(../assets/images/bg-boost-desktop.svg);
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+
+   .display-5 {
+     color: white;
+   }
+   .btn{
+       width: 10%;
+       align-self: center;
+       margin-top: 15px;
+   }
+ }
+
+ .bd-placeholder-img {
+   font-size: 1.125rem;
+   text-anchor: middle;
+   -webkit-user-select: none;
+   -moz-user-select: none;
+   user-select: none;
+ }
+
+ @media (min-width: 768px) {
+   .bd-placeholder-img-lg {
+     font-size: 3.5rem;
+   }
+ }
