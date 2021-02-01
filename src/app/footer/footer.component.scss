@@ -1,0 +1,30 @@
+@import '../../styles.scss';
+
+footer{
+background-color: $very-dark-violet;
+}
+
+
+.container{
+    margin: 0;
+    max-width: 100%;
+    padding-left: 140px;
+}
+
+
+.heading{
+    color: white;
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.text-muted{
+font-size: 14px;
+color: $grayish-violet;
+}
+
+.icon{
+    width: 10%;
+    height: auto;
+    margin: 0 5px;
+}
