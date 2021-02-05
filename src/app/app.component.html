@@ -1,4 +1,3 @@
-
 <app-header></app-header>
 <main>
   <div class="intro section-padding d-md-flex flex-md-equal w-100 my-md-3 ps-md-3">
@@ -17,11 +16,23 @@
   </div>
 
   <div class="advanced section-padding">
-    <div class="url-container">
-      <input class="form-control" type="text" placeholder="Shorten a link here.." />
-      <button class="btn-rect">Get Started </button>
+    <div class="api-container">
+      <div class="url-container">
+        <input type="text" class="form-control"  placeholder="Shorten a link here.." #link id  ="link"/>
+        <button class="btn-rect" (click)="getShortLinks(link.value)">Shorten it </button>
+      </div>
+
+      <div *ngIf="objLinks.length != 0" class="result-container">
+        <div *ngFor="let obj of objLinks; index as i" class="result">
+          <p class="long-link">{{obj.longLink}}</p>
+          <p class="short-link">{{obj.shortLink}}</p>
+          <button class="btn-rect secondary"> copy</button>
+        </div>
+      </div>
     </div>
-    <div class="lg-padding text-center">
+
+
+    <div class="text-center">
       <h2 class="display-5 sm-padding-bottom"> Advanced Statistics</h2>
       <p class="lead"> Track how your links are performing across the web with our
         advanced statistics dashboard.</p>
