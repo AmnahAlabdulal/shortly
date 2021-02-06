@@ -9,24 +9,23 @@ import { toEditorSettings } from 'typescript';
 })
 export class AppComponent {
   title = 'shortly';
-  objLink = {
-    longLink: '',
-    shortLink: ''
-  }
   objLinks = new Array();
 
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient) {
+  }
 
   getShortLinks(link: string) {
     if (link.length != 0) {
-      this.objLink.longLink = link;
-      var data = this.http.get(`https://api.shrtco.de/v2/shorten?url=${this.objLink.longLink}`)
+      var data = this.http.get(`https://api.shrtco.de/v2/shorten?url=${link}`)
         .subscribe(res => {
           let data: any = res;
-          this.objLink.shortLink = data.result.short_link;
-          this.objLinks.push(this.objLink);
-          (<HTMLInputElement>document.getElementById('link')).value ='';
+          this.objLinks.push({ long: link, short: data.result.short_link });
+          (<HTMLInputElement>document.getElementById('link')).value = '';
         });
     }
+  }
+
+  copyShortLink(link: string) {
+    console.log(link);
   }
 }
