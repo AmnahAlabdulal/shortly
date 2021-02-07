@@ -16,22 +16,28 @@
   </div>
 
   <div class="advanced section-padding">
+    <!-- <form class="row g-3 needs-validation"> -->
     <div class="api-container">
       <div class="url-container">
-        <input type="text" class="form-control"  placeholder="Shorten a link here.." #link id  ="link"/>
-        <button class="btn-rect" (click)="getShortLinks(link.value)">Shorten it </button>
+        <input type="text" class="form-control" placeholder="Shorten a link here.." #link id="link" required />
+        <span class="invalid-link">
+          Please choose a username.
+        </span>
+        <button class="btn btn-rect" type="submit" (click)="getShortLinks(link.value)">Shorten it </button>
+        <ngx-spinner bdColor="rgba(51,51,51,0.8)" size="medium" color="#fff" type="ball-scale-multiple">
+          <p style="font-size: 20px; color: #2acfcf">Loading...</p>
+        </ngx-spinner>
       </div>
 
       <div *ngIf="objLinks.length != 0" class="result-container">
         <div *ngFor="let obj of objLinks; index as i" class="result">
           <p class="long-link">{{obj.long}}</p>
           <p class="short-link">{{obj.short}}</p>
-          <button class="btn-rect secondary" (click) ="copyShortLink(obj.short)" > copy</button>
+          <button class="btn-rect secondary" (click)="copyShortLink(obj.short,i)"> copy</button>
         </div>
       </div>
     </div>
-
-
+    <!-- </form> -->
     <div class="text-center">
       <h2 class="display-5 sm-padding-bottom"> Advanced Statistics</h2>
       <p class="lead"> Track how your links are performing across the web with our
@@ -40,7 +46,7 @@
 
     <div class="flex-container">
       <div class="flexbox first">
-        <img class="icon" src="../assets/images/icon-brand-recognition.svg" alt="icon-bran-recognition" />
+        <img class="icon" src="../assets/images/icon-brand-recognition.svg" alt="icon brand recognition" />
         <h5 class="display-5"> Brand Recognition </h5>
         <p>
           Boost your brand recognition with each click. Generic links don’t
@@ -49,7 +55,7 @@
       </div>
 
       <div class="flexbox second">
-        <img class="icon" src="../assets/images/icon-detailed-records.svg" alt="icon-bran-recognition" />
+        <img class="icon" src="../assets/images/icon-detailed-records.svg" alt="icon detailed records" />
         <h5 class="display-5"> Detailed Records </h5>
         <p>
           Gain insights into who is clicking your links. Knowing when and where
@@ -58,7 +64,7 @@
       </div>
 
       <div class="flexbox third">
-        <img class="icon" src="../assets/images/icon-fully-customizable.svg" alt="icon-bran-recognition" />
+        <img class="icon" src="../assets/images/icon-fully-customizable.svg" alt="icon fully customizable" />
         <h5 class="display-5"> Fully Customizable </h5>
         <p>
           Improve brand awareness and content discoverability through customizable
