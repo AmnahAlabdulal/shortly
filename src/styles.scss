@@ -22,7 +22,7 @@ $red: hsl(0, 87%, 67%);
 // ### Neutral
 
 $gray: hsl(0, 0%, 75%);
-$light-gray: hsl(210,16,97);
+$light-gray: hsl(210, 16, 97);
 $grayish-violet: hsl(257, 7%, 63%);
 $very-dark-blue: hsl(255, 11%, 22%);
 $very-dark-violet: hsl(260, 8%, 14%);
@@ -32,16 +32,17 @@ $very-dark-violet: hsl(260, 8%, 14%);
 // titles 
 
 .display-4,
-.display-5 {
+.display-5,
+.display-6{
   font-weight: 700;
-  color: black;
+  color: $very-dark-blue;
 }
 
 
 
 // buttons
 
-.btn{
+.btn {
   background-color: $cyan;
   color: white;
   border-radius: 25px;
@@ -58,7 +59,7 @@ $very-dark-violet: hsl(260, 8%, 14%);
   font-size: 14px;
 }
 
-.secondary{
+.secondary {
   background-color: $cyan;
   padding: 5px 15px;
 }
@@ -66,7 +67,7 @@ $very-dark-violet: hsl(260, 8%, 14%);
 
 .btn:hover,
 .btn-rect:hover,
-.btn-rect.secondary:hover{
+.btn-rect.secondary:hover {
   background-color: hsl(180, 79%, 54%);
   color: white;
 }
@@ -74,18 +75,31 @@ $very-dark-violet: hsl(260, 8%, 14%);
 
 // padding
 
-.section-padding {
-  padding-left: 90px;
-  padding-top: 50px;
-}
+
 
 .sm-padding-bottom {
   padding-bottom: 15px;
 }
 
-.lg-padding{
+.lg-padding {
   padding-top: 100px;
 }
 
-// margin
 
+@media (max-width: 700px) {
+
+  .display-4 {
+    font-size: 40px;
+  }
+  .display-5 {
+    font-size: 30px;
+  }
+  
+  .btn {
+    padding: 10px 20px;
+    font-size: 20px;
+    width: 170px;
+  }
+
+
+}

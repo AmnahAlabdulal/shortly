@@ -1,37 +1,64 @@
 @import '../../styles.scss';
 
-footer{
-background-color: $very-dark-violet;
+footer {
+  background-color: $very-dark-violet;
+}
+
+.container {
+  margin: 0;
+  max-width: 100%;
+  padding: 0 90px;
 }
 
 
-.container{
-    margin: 0;
-    max-width: 100%;
-    padding-left: 140px;
+.heading {
+  color: white;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.text-muted {
+  font-size: 14px;
+  color: $grayish-violet;
+}
+
+.text-muted:hover {
+  color: $cyan !important;
+  text-decoration: none;
+}
+
+.icon:hover path {
+  fill: $cyan;
+}
+
+.icon {
+  width: 25px;
+  height: auto;
+  margin: 0 5px;
 }
 
 
-.heading{
-    color: white;
-    font-size: 14px;
-    font-weight: 700;
+
+.attribution {
+  text-align: center;
+  color: $grayish-violet;
+  font-size: 12px;
+  padding-top: 30px;
 }
 
-.text-muted{
-font-size: 14px;
-color: $grayish-violet;
-}
+@media (max-width: 700px) {
 
-.icon{
-    width: 10%;
-    height: auto;
-    margin: 0 5px;
-}
+  .container {
+    padding: 0 20px;
+  }
 
-.attribution{
+  .logo {
+    margin-bottom: 40px;
+  }
+
+  .logo,
+  .col-sm-12 {
     text-align: center;
-    color: $grayish-violet;
-    font-size: 12px;
-    padding-top: 30px;
- }
+  }
+
+}

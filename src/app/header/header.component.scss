@@ -1,7 +1,7 @@
 @import '../../styles.scss';
 
 .navbar {
-  padding: 40px 90px
+  padding: 40px;
 }
 
 .nav-link {
@@ -16,5 +16,13 @@
   .btn{
    width: 100px;
    margin: 0 20px;
+  }
+}
+
+ 
+
+@media (max-width: 700px) {
+  .navbar {
+    padding: 40px 20px; 
   }
 }

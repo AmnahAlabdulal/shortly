@@ -1,30 +1,45 @@
  @import '../styles.scss';
 
-
+ //  -------------------- Intro Section  --------------------
  .intro {
    height: 600px;
    color: $grayish-violet;
+   display: flex;
+   padding-left: 90px;
+   align-items: center;
+ }
+
+ .box-1,
+ .box-2 {
+   width: 50%;
+
+   .lead {
+     width: 90%;
+   }
+
  }
 
  .img-bg {
-   width: 130%;
+   width: 120%;
    height: auto;
    background-repeat: no-repeat;
  }
 
 
+ //  -------------------- Advanced Section  --------------------
+
  .advanced {
-   position: relative;
+   padding: 50px;
    background-color: $light-gray;
+   width: 100%;
    height: auto;
    color: $grayish-violet;
-   padding-right: 90px;
-   padding-bottom: 100px;
 
    .lead {
      width: 50%;
      margin: 0 auto;
    }
+
  }
 
  .api-container {
@@ -51,15 +66,15 @@
    gap: 20px;
 
    .form-control {
-    position: relative;
+     position: relative;
    }
  }
 
- .invalid-link{
+ .invalid-link {
    color: red;
    font-size: 10px;
    position: absolute;
-   top:50px;
+   top: 50px;
    left: 20px;
    visibility: hidden;
  }
@@ -90,7 +105,7 @@
  }
 
  .long-link {
-   flex:1;
+   flex: 1;
    color: black;
    padding-top: 20px;
  }
@@ -145,7 +160,6 @@
  }
 
 
-
  .second {
    margin-top: 40px;
    position: relative;
@@ -174,7 +188,7 @@
    flex-direction: column;
    justify-content: center;
 
-   .display-5 {
+   .display-6 {
      color: white;
    }
 
@@ -193,8 +207,111 @@
  }
 
 
- @media (min-width: 768px) {
-   .bd-placeholder-img-lg {
-     font-size: 3.5rem;
+ @media (max-width: 700px) {
+   .intro {
+     flex-direction: column-reverse;
+     height: auto;
+     padding: 0;
+
+     .lead {
+       width: 100%;
+       margin: 0 auto;
+       font-size: 18px;
+     }
+
+     .btn {
+       margin-top: 20px;
+     }
    }
+
+   .img-bg {
+     width: 110%;
+   }
+
+   .box-2 {
+     width: 100%;
+     height: auto;
+     padding-left: 40px;
+   }
+
+   .box-1 {
+     width: 90%;
+     text-align: center;
+     padding-bottom: 100px;
+   }
+
+   .advanced {
+     padding: 20px;
+
+     .lead {
+       width: 90%;
+       margin: 0 auto;
+       font-size: 18px;
+     }
+   }
+
+   .api-container {
+     width: 90%;
+     margin-top: -80px;
+     margin-bottom: 40px;
+   }
+
+   .url-container {
+     flex-direction: column;
+     justify-content: stretch;
+     height: 150px;
+
+     .form-control {
+       padding: 20px 10px !important;
+     }
+   }
+
+   .btn.btn-rect {
+     width: 100%;
+   }
+
+
+   .flex-container {
+     flex-direction: column;
+     align-items: center;
+     padding-bottom: 80px;
+   }
+
+   .flexbox {
+     padding: 50px 20px 10px 20px;
+     width: 350px;
+     height: 200px;
+     text-align: center;
+   }
+
+   .first:after,
+   .second:after {
+     height: 100px;
+     width: 10px;
+     top: 200px;
+     left: 0;
+     right: 0;
+     margin-left: auto;
+     margin-right: auto;
+   }
+
+   .icon {
+     width: 70px;
+     height: 70px;
+     padding: 18px;
+     clip-path: circle();
+     position: absolute;
+     top: -40px;
+     left: 0;
+     right: 0;
+     margin-left: auto;
+     margin-right: auto;
+   }
+
+
+   .third {
+     margin-top: 40px;
+   }
+
+
  }
