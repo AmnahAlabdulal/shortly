@@ -2,27 +2,66 @@
 
 .navbar {
   padding: 40px;
+  margin-bottom: 10px;
 }
 
 .nav-link {
-  color:  $grayish-violet;
+  color: $grayish-violet;
 }
 
 .navbar-brand {
   padding: 0 30px;
 }
 
-.nav-item{
-  .btn{
-   width: 100px;
-   margin: 0 20px;
+.nav-item {
+  .btn {
+    width: 100px;
+    margin: 0 20px;
   }
 }
 
- 
+.navbar-collapse.show {
+  text-align: center;
+  background-color: $dark-violet;
+  border-radius: 5px;
+  margin: 10px 0;
+  padding: 10px 0;
+
+  .nav-link {
+    font-weight: 700;
+    color: white !important;
+  }
+
+  .nav-link {
+    font-weight: 700;
+    color: white;
+  }
+
+  .nav-item{
+    margin: 5px 0;
+  }
+
+  .navbar-nav.mr-auto {
+    padding-top: 20px;
+  }
+
+  .navbar-nav.ml-auto {
+    padding: 10px 0;
+  }
+
+  .navbar-nav.ml-auto:before {
+    content: "";
+    width: 80%;
+    height: 1px;
+    background-color: $grayish-violet;
+    margin: 0 auto;
+  }
+}
+
+
 
 @media (max-width: 700px) {
   .navbar {
-    padding: 40px 20px; 
+    padding: 40px 20px;
   }
 }
