@@ -23,13 +23,25 @@ export class AppComponent {
         .subscribe(res => {
           let data: any = res;
           this.objLinks.push({ long: link, short: data.result.short_link });
-          (<HTMLInputElement>document.getElementById('link')).value = '';
-          this.spinner.hide();
-        });
+          this.restInput();
+        },
+          (err) => {
+            this.restInput();
+            alert('Invalid link!!')
+          });
     } else {
-       
+      document.getElementById('link')?.classList.add('is-invalid');
     }
   }
+
+
+
+  restInput() {
+    this.spinner.hide();
+    document.getElementById('link')?.classList.remove('is-invalid');
+    (<HTMLInputElement>document.getElementById('link')).value = '';
+  }
+
 
   copyShortLink(link: string, index: number) {
     navigator.clipboard.writeText(link).then(function () {

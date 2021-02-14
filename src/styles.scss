@@ -33,7 +33,7 @@ $very-dark-violet: hsl(260, 8%, 14%);
 
 .display-4,
 .display-5,
-.display-6{
+.display-6 {
   font-weight: 700;
   color: $very-dark-blue;
 }
@@ -89,21 +89,26 @@ $very-dark-violet: hsl(260, 8%, 14%);
 @media (max-width: 700px) {
 
   .display-4 {
-    font-size: 40px;
+    font-size: 36px;
   }
+
   .display-5 {
-    font-size: 30px;
+    font-size: 24px;
   }
-  
+
   .btn {
     padding: 10px 20px;
     font-size: 20px;
     width: 170px;
   }
 
-  .btn-signup{
+  .btn-signup {
     font-size: 14px;
     width: 80% !important;
+  }
+
+  .secondary {
+    width: 100%;
   }
 
 

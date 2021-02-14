@@ -1,8 +1,14 @@
 @import '../../styles.scss';
 
+
+body{
+  overflow: hidden;
+}
+
 .navbar {
   padding: 40px;
   margin-bottom: 10px;
+  width: 100%;
 }
 
 .nav-link {
@@ -62,6 +68,11 @@
 
 @media (max-width: 700px) {
   .navbar {
-    padding: 40px 20px;
+    padding: 30px 25px;
   }
+
+  .navbar-brand {
+    padding: 0 5px;
+  }
+
 }
